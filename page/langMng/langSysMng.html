@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+	<link rel="stylesheet" href="../../css/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="../../css/dropify.css">
+	<link rel="stylesheet" href="../../css/swiper.css">
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+	<script src="../../js/jquery.placeholder.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+	<script src="../../js/jquery.dataTables.min.js"></script>
+	<script src="../../js/dropify.min.js"></script>
+	<script src="../../js/swiper.js"></script>
+    <script src="../../js/script.js"></script>
+    <title>KORLOY</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#lnb_list06").addClass("active");
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready( function () {
+			$('#myTable').DataTable();
+			$('#myTable2').DataTable();
+			$(".btn_addLang").click(function(){
+				$(this).parent().parent().parent().next(".listTable").find('tbody:last').append('<tr><td><label class="radioN"><input type="radio" name="lang"><span></span></label></td><td><input type="text" value="" id=""></td><td></td></tr>');
+			});
+		} );
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="lnb">
+			<a href="#" class="open_lnb"><i class="fa fa-bars"></i></a>
+            <h1><a href="#"><img src="../../img/img_logo.png" alt=""></a></h1>
+            <div class="lnb_list">
+                <ul>
+                    <li><a id="lnb_list01" href="../dashboard/dashboard.html"><i class="fa fa-home"></i>Home / Dashboard</a></li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list02" href="#"><i class="fa fa-user"></i>고객 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list02_01" href="../customerMng/customerMng.html"><i class="fa fa-user"></i>고객관리</a></li>
+								<li><a id="lnb_list02_02" href="../customerMng/customerGroupMng.html"><i class="fa fa-users"></i>고객 그룹관리</a></li>
+                                <li><a id="lnb_list02_03" href="../customerMng/customerAdmMng.html"><i class="fa fa-cog"></i>고객그룹 권한관리</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list03" href="#"><i class="fa fa-address-book"></i>임직원 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list03_01" href="../employeeMng/employeeMng.html"><i class="fa fa-address-book"></i>임직원 관리</a></li>
+                                <li><a id="lnb_list03_02" href="../employeeMng/employeeGroupMng.html"><i class="fa fa-address-card"></i>임직원 그룹관리</a></li>
+                                <li><a id="lnb_list03_03" href="../employeeMng/employeeAdmMng.html"><i class="fa fa-cogs"></i>임직원 메뉴 권한</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list04" href="#"><i class="fa fa-folder-open"></i>컨텐츠 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list04_01" href="../contentMng/interfaceMng.html"><i class="fa fa-plug"></i>인터페이스 관리</a></li>
+                                <li><a id="lnb_list04_02" href="../contentMng/mainApp.html"><i class="fa fa-window-maximize"></i>Main Application</a></li>
+                                <li><a id="lnb_list04_03" href="../contentMng/subApp.html"><i class="fa fa-window-restore"></i>Sub Application</a></li>
+                                <li><a id="lnb_list04_04" href="../contentMng/itemGroup.html"><i class="fa fa-tags"></i>Item Group</a></li>
+                                <li><a id="lnb_list04_05" href="../contentMng/item.html"><i class="fa fa-tag"></i>Item</a></li>
+                                <li><a id="lnb_list04_06" href="../contentMng/itemInfoMng.html"><i class="fa fa-database"></i>재종정보 관리</a></li>
+								<li><a id="lnb_list04_07" href="../contentMng/item02.html"><i class="fa fa-keyboard-o"></i>Item 등록</a></li>
+								<li><a id="lnb_list04_08" href="../propertyMng/propertySet.html"><i class="fa fa-wrench"></i>Property Master</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="lnb_list06" href="../langMng/langWebMng.html"><i class="fa fa-globe"></i>다국어 관리</a></li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list07" href="#"><i class="fa fa-power-off"></i>시스템관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list07_01" href="../codeMng/codeWebMng.html"><i class="fa fa-code"></i>코드관리</a></li>
+                                <li><a id="lnb_list07_02" href="../logMng/logMng.html"><i class="fa fa-laptop"></i>로그관리</a></li>
+								<li><a id="lnb_list07_03" href="#"><i class="fa fa-list-ul"></i>통계관리(link)</a></li>
+								<li><a id="lnb_list07_04" href="#"><i class="fa fa-power-off"></i>시스템관리(link)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="container">
+            <div class="gnb">
+                <h2>KORLOY eCatalog 관리 시스템</h2>
+                <div class="member">
+                    <span>홍길동님</span>
+                    <a href="../memberMng/myInfoMng.html">개인정보 변경</a>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="tit">다국어 관리-Web</div>
+				<div class="tabMenu">
+					<ul>
+						<li><a href="./langWebMng.html">Web</a></li>
+						<li class="on"><a href="./langSysMng.html">System</a></li>
+						<li><a href="./langInfoMng.html">재종정보</a></li>
+						<li><a href="./langItemMng.html">Item Group</a></li>
+						<li class="long"><a href="#">Tailored Item Request Form (link)</a></li>
+					</ul>
+				</div>
+				<div class="conBlock">
+					<div class="left30Con">
+						<div class="resultGuideSec">
+							<div class="arRight">
+								<span class="btnS gray"><a href="#">수정</a></span>
+								<span class="btnS blue"><a href="#" class="btn_addLang">언어 추가</a></span>
+							</div>
+						</div>
+						<div class="listTable">
+							<table>
+								<colgroup>
+								<col width="10%"><col width="*"><col width="20%">
+								</colgroup>
+								<thead>
+								<tr>
+									<th></th>
+									<th>언어명</th>
+									<th>선택</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio"><span></span>
+										</label>
+									</td>
+									<td class="arLeft">brezhoneg</td>
+									<td><span class="btnS lineB"><a href="#">선택</a></span></td>
+								</tr>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio" name="lang"><span></span>
+										</label>
+									</td>
+									<td class="arLeft">Deutsch</td>
+									<td><span class="btnS lineB"><a href="#">선택</a></span></td>
+								</tr>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio" name="lang"><span></span>
+										</label>
+									</td>
+									<td class="arLeft">Italiano</td>
+									<td><span class="btnS lineB"><a href="#">선택</a></span></td>
+								</tr>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio" name="lang"><span></span>
+										</label>
+									</td>
+									<td class="arLeft">한국어</td>
+									<td><span class="btnS lineB"><a href="#">선택</a></span></td>
+								</tr>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio" name="lang"><span></span>
+										</label>
+									</td>
+									<td class="arLeft">Português</td>
+									<td><span class="btnS lineB"><a href="#">선택</a></span></td>
+								</tr>
+								<tr>
+									<td>
+										<label class="radioN">
+											<input type="radio" name="lang"><span></span>
+										</label>
+									</td>
+									<td><input type="text" value="" id=""></td>
+									<td></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btnArea maT10 arRight">
+							<span class="btn blue"><a href="#">저장</a></span>
+						</div>
+					</div>
+					<div class="left70Con">
+						<div class="resultGuideSec">
+							<div class="halfGuide">
+								<span class="btnS lineG"><a href="#"><i class="fa fa-file-excel-o"></i> 다운받기</a></span>
+								<span class="btnS gray"><a href="#"><i class="fa fa-file-excel-o"></i> 업로드</a></span>
+								<span class="btnS borderB"><a href="#"><i class="fa fa-file-excel-o"></i> 업로드 양식</a></span>
+							</div>
+							<div class="halfGuide arRight">
+								<input type="text" value="" id="" class="wd300">
+								<span class="btnS gray"><a href="#">검색</a></span>
+								<span class="btnS blue"><a href="#">저장</a></span>
+							</div>
+						</div>
+						<div class="listTable">
+							<table id="myTable2">
+								<colgroup>
+								<col width="10%"><col width="20%"><col width="20%"><col width="20%"><col width="*">
+								</colgroup>
+								<thead>
+								<tr>
+									<th>최대글자수</th>
+									<th>프라퍼티 (21,120)</th>
+									<th>영어 (21,100)</th>
+									<th>한국어 (21,100)</th>
+									<th>L</th>
+									<th>브라질어 (21,100)</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>activity</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>32</td>
+									<td>actually</td>
+									<td></td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>activity</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>32</td>
+									<td>actually</td>
+									<td></td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>action</td>
+									<td>english</td>
+									<td>한국어</td>
+									<td></td>
+									<td>
+										<input type="text" value="" id="" placeholder="brezhoneg" class="wdPer90">
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

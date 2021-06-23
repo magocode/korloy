@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+	<link rel="stylesheet" href="../../css/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="../../css/dropify.css">
+	<link rel="stylesheet" href="../../css/swiper.css">
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+	<script src="../../js/jquery.placeholder.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+	<script src="../../js/jquery.dataTables.min.js"></script>
+	<script src="../../js/dropify.min.js"></script>
+	<script src="../../js/swiper.js"></script>
+    <script src="../../js/script.js"></script>
+    <title>KORLOY</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#lnb_list03").addClass("on").next().show();
+			$("#lnb_list03_01").addClass("active");
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready( function () {
+			$('#myTable').DataTable();
+			$('#myTable2').DataTable();
+		} );
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="lnb">
+			<a href="#" class="open_lnb"><i class="fa fa-bars"></i></a>
+            <h1><a href="#"><img src="../../img/img_logo.png" alt=""></a></h1>
+            <div class="lnb_list">
+                <ul>
+                    <li><a id="lnb_list01" href="../dashboard/dashboard.html"><i class="fa fa-home"></i>Home / Dashboard</a></li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list02" href="#"><i class="fa fa-user"></i>고객 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list02_01" href="../customerMng/customerMng.html"><i class="fa fa-user"></i>고객관리</a></li>
+								<li><a id="lnb_list02_02" href="../customerMng/customerGroupMng.html"><i class="fa fa-users"></i>고객 그룹관리</a></li>
+                                <li><a id="lnb_list02_03" href="../customerMng/customerAdmMng.html"><i class="fa fa-cog"></i>고객그룹 권한관리</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list03" href="#"><i class="fa fa-address-book"></i>임직원 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list03_01" href="../employeeMng/employeeMng.html"><i class="fa fa-address-book"></i>임직원 관리</a></li>
+                                <li><a id="lnb_list03_02" href="../employeeMng/employeeGroupMng.html"><i class="fa fa-address-card"></i>임직원 그룹관리</a></li>
+                                <li><a id="lnb_list03_03" href="../employeeMng/employeeAdmMng.html"><i class="fa fa-cogs"></i>임직원 메뉴 권한</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list04" href="#"><i class="fa fa-folder-open"></i>컨텐츠 관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list04_01" href="../contentMng/interfaceMng.html"><i class="fa fa-plug"></i>인터페이스 관리</a></li>
+                                <li><a id="lnb_list04_02" href="../contentMng/mainApp.html"><i class="fa fa-window-maximize"></i>Main Application</a></li>
+                                <li><a id="lnb_list04_03" href="../contentMng/subApp.html"><i class="fa fa-window-restore"></i>Sub Application</a></li>
+                                <li><a id="lnb_list04_04" href="../contentMng/itemGroup.html"><i class="fa fa-tags"></i>Item Group</a></li>
+                                <li><a id="lnb_list04_05" href="../contentMng/item.html"><i class="fa fa-tag"></i>Item</a></li>
+                                <li><a id="lnb_list04_06" href="../contentMng/itemInfoMng.html"><i class="fa fa-database"></i>재종정보 관리</a></li>
+								<li><a id="lnb_list04_07" href="../contentMng/item02.html"><i class="fa fa-keyboard-o"></i>Item 등록</a></li>
+								<li><a id="lnb_list04_08" href="../propertyMng/propertySet.html"><i class="fa fa-wrench"></i>Property Master</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="lnb_list06" href="../langMng/langWebMng.html"><i class="fa fa-globe"></i>다국어 관리</a></li>
+                    <li class="lnb_sub">
+                        <a id="lnb_list07" href="#"><i class="fa fa-power-off"></i>시스템관리</a>
+                        <div class="sub_list">
+                            <ul>
+								<li><a id="lnb_list07_01" href="../codeMng/codeWebMng.html"><i class="fa fa-code"></i>코드관리</a></li>
+                                <li><a id="lnb_list07_02" href="../logMng/logMng.html"><i class="fa fa-laptop"></i>로그관리</a></li>
+								<li><a id="lnb_list07_03" href="#"><i class="fa fa-list-ul"></i>통계관리(link)</a></li>
+								<li><a id="lnb_list07_04" href="#"><i class="fa fa-power-off"></i>시스템관리(link)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="container">
+            <div class="gnb">
+                <h2>KORLOY eCatalog 관리 시스템</h2>
+                <div class="member">
+                    <span>홍길동님</span>
+                    <a href="../memberMng/myInfoMng.html">개인정보 변경</a>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+            <div class="content customer">
+                <div class="tit">임직원 관리</div>
+                <div class="conBlock">
+					<div class="inputTable">
+                        <table>
+                            <colgroup>
+                            <col width="20%"><col width="*"><col width="20%"><col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>ID <span class="tRed bold">*</span></th>
+                                    <td>
+										<input type="text" value="" id="" placeholder="사번" readonly>
+                                    </td>
+                                    <th>이름 <span class="tRed bold">*</span></th>
+                                    <td>
+                                        <input type="text" value="" id="" placeholder="Enter name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Email <span class="tRed bold">*</span></th>
+                                    <td colspan="3">
+                                        <input type="text" value="" id="" placeholder="Enter email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사업장</th>
+                                    <td colspan="3">
+                                        <input type="text" value="" id="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>부서(팀) <span class="tRed bold">*</span></th>
+                                    <td>
+                                        <input type="text" value="" id="">
+                                    </td>
+                                    <th>직위</th>
+                                    <td>
+                                        <input type="text" value="" id="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비고</th>
+                                    <td colspan="3">
+                                        <input type="text" value="" id="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>권한그룹</th>
+                                    <td colspan="3">
+                                        <select name="" id="" >
+                                            <option value="">연구소</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사용여부</th>
+                                    <td colspan="3" >
+                                        <select name="" id="" >
+                                            <option value="">Yes</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>가입일시</th>
+                                    <td colspan="3">
+                                        2021-05-06 13:15:23
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+				    </div>
+				    <div class="resultGuideSec">
+                        <div class="arCenter">
+                            <span class="btnS white"><a href="#">삭제</a></span>
+                            <span class="btnS blue"><a href="#">저장</a></span>
+                        </div>
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
